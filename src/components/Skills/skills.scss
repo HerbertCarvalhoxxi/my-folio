@@ -1,0 +1,130 @@
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;  
+
+        h2 {
+            display: flex;
+            color: #ffffff;
+            text-align: center;
+        }
+
+    .skills-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    
+    .img-side {
+        order: 1;
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    .img-side img {
+        width: 500px;
+        order: 1;
+        
+    }
+
+    .items-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 350px;
+        justify-content: space-between;
+        order: 0;
+        transform: translateX(-300px);
+        opacity: 0;
+
+        h2 {
+            display: flex;
+            text-align: center;
+        }
+
+    }
+
+    .little-container {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        
+        ion-icon {
+            font-size: 64px;
+            background-color: hsla(0, 0%, 100%, 0.459);
+            padding: 12px;
+            border-radius: 100%;
+            margin: 5px   
+          }
+        
+        ion-icon:hover {
+            background-color: hsla(0, 0%, 100%, 0.959);
+            transition: 500ms all ease-in;
+        } 
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+
+    .skills-box {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .img-side {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+
+        .img-side img {
+            width: 80%;
+            height: 80%;
+            order: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .items-side {
+            width: auto;
+            justify-content: center;
+            order: 0;
+
+            .h2 {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                
+            }
+        }
+
+        .little-container {
+
+        ion-icon {
+            font-size: 42px;
+            padding: 6px;
+        }
+    }
+    }
+    }
+
+
+ 
+

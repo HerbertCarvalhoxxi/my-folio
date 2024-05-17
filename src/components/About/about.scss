@@ -1,0 +1,98 @@
+.emojis-container {
+    margin: 65px 0 40px 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+    flex-direction: column;
+    transform: translateX(-700px);
+    opacity: 0;
+
+    h1 {
+        display: flex;
+        text-align: center;
+    }
+
+    h2 {
+        display: flex;
+        text-align: center;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    .bubble-rocket, .bubble-alien, .bubble-dev, .bubble-pc {
+        background-color: hsla(0, 0%, 100%, 0.1);
+        padding: 12px;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .bubble-dev {
+        top: -5%;
+        left: 400px;
+        font-size: 40px;
+        animation: moveUpDown 3s ease infinite;
+
+    }
+
+    .bubble-pc {
+        bottom: 10%;
+        left: 300px;
+        font-size: 30px;
+        animation: moveUpDown 3s ease infinite;
+    }
+
+    .bubble-rocket {
+        top: 20%;
+        right: 420px;
+        font-size: 24px;
+        animation: moveUpDown 3s ease infinite;
+    }
+
+    .bubble-alien {
+        bottom: 10%;
+        right: 370px;
+        font-size: 32px;
+        animation: moveUpDown 3s ease infinite;
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0); /* Começa e termina na posição normal */
+    }
+    50% {
+      transform: translateY(-20px); /* Vai para cima */
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .emojis-container {
+    img {
+        width: 50%;
+    }
+    }
+    .bubble-rocket, .bubble-alien, .bubble-dev, .bubble-pc {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .emojis-container {
+        margin-top: 25px;
+    img {
+        width: 100%;
+        position: relative;
+        z-index: 998;
+    }
+    
+    .bubble-rocket, .bubble-alien, .bubble-dev, .bubble-pc {
+        display: none;
+    }
+    
+    }
+  }
